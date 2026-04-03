@@ -1,0 +1,43 @@
+.gramas-hero {
+  min-height: 70vh; background: #0a1200;
+  display: flex; align-items: center;
+  padding: 120px 24px 80px; position: relative; overflow: hidden;
+}
+.gramas-hero .hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(100,180,50,0.1) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(201,168,76,0.07) 0%, transparent 50%);
+}
+.gramas-hero-inner {
+  max-width: 700px; margin: 0 auto; text-align: center;
+  position: relative; z-index: 1;
+}
+.gramas-hero h1 { font-size: clamp(2rem,4vw,3.2rem); color:#fff; line-height:1.15; margin-bottom:20px; }
+.gramas-hero h1 span { color: var(--gold); }
+.gramas-hero .hero-sub { color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.7; margin-bottom:36px; }
+
+.gramas-about { padding: 100px 24px; background: var(--cream2); }
+.gramas-about h2 { font-size: 2.2rem; margin-bottom: 20px; }
+.gramas-about p { color: var(--muted); line-height: 1.8; margin-bottom: 14px; }
+
+.gramas-brands-mini { display: flex; flex-direction: column; gap: 20px; }
+.mini-brand {
+  display: flex; gap: 16px; align-items: flex-start;
+  background: #fff; border-radius: 10px; padding: 18px 20px;
+  border: 1px solid rgba(201,168,76,0.15);
+}
+.mini-brand span { font-size: 1.8rem; flex-shrink: 0; }
+.mini-brand strong { display: block; color: var(--dark2); margin-bottom: 4px; }
+.mini-brand p { color: var(--muted); font-size: 0.85rem; line-height: 1.5; margin: 0; }
+
+.gramas-products { padding: 100px 24px; background: var(--dark); }
+.gramas-products h2 { color: #fff; }
+.gramas-products .section-sub { color: rgba(255,255,255,0.5); }
+
+@media (max-width: 900px) {
+  .gramas-about .about-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .gramas-hero, .gramas-about, .gramas-products { padding: 70px 20px; }
+}
